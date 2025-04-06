@@ -23,10 +23,9 @@
     }
 
     function createUserInfoCard(user) {
-        // 创建容器并添加样式
         const container = document.createElement('div');
         container.style.position = 'fixed';
-        container.style.top = '60px'; // 向下移动
+        container.style.top = '60px';
         container.style.left = '20px';
         container.style.width = '300px';
         container.style.background = 'rgba(255, 255, 255, 0.15)';
@@ -42,7 +41,6 @@
         container.style.color = '#fff';
         container.style.lineHeight = '1.6';
 
-        // 添加用户信息内容
         container.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <h3 style="margin-top:0;font-size:16px;">👤 ${user.nickname}</h3>
@@ -68,7 +66,6 @@
 
         document.body.appendChild(container);
 
-        // 折叠按钮的功能
         const toggleButton = document.getElementById('toggle');
         const infoContent = document.getElementById('infoContent');
 
@@ -80,7 +77,6 @@
             toggleButton.textContent = isCollapsed ? '▼' : '▲';
         };
 
-        // 允许面板拖动
         let isDragging = false;
         let offsetX, offsetY;
 
